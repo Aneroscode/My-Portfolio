@@ -20,7 +20,7 @@ function App() {
 
   return (
     
-  <div>
+  <div className=' flex flex-col items-center  gap-6 md:gap-12 max-w-[1440px] mx-auto md:px-12 md:py-12 relative  lg:px-[120px] xl:px-[300px] bg-background py-6 px-4'>
     <Suspense fallback ={
       
       <AnimatePresence mode="wait">
@@ -43,7 +43,7 @@ function App() {
        transition={{ duration: 0.6, delay: 0.2 }}
     >
       <Navbar/>
-      <main className='max-w-6xl mx-auto px-6 sm:px-12'>
+      <main className=' '>
         <Hero/>
         <About/>
         <Work/>

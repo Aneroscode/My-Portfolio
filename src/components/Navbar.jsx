@@ -16,20 +16,20 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0a192f] bg-opacity-70 font-[poppins] backdrop-blur-md border-b border-slate-800 shadow-md">
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <header className="  sticky top-[20px] mt-[20px] z-50 bg-[#f7f7f7]/80 bg-opacity-70 font-[poppins] backdrop-blur-sm rounded-[32px] overflow-hidden md:p-2 w-[calc(100%-32px)] border border-solid border-[#efefef] transition-all duration-300 hover:scale-[1.01] shadow-md max-w-full">
+      <nav className="  px-6  flex justify-between items-center relative w-full md:w-auto">
         {/* Logo */}
         <div className="text-2xl font-bold text-primary">Anero</div>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-8 text-sm text-light uppercase tracking-widest">
+        <ul className="hidden md:flex space-x-8 text-sm text-primary uppercase tracking-widest">
           {navItems.map(({ id, label, to }) => (
             <li key={id}>
               <Link
                 to={to}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-primary transition-colors "
+                className="cursor-pointer whitespace-nowrap text-sm font-medium p-2 transition-colors text-primary shadow h-9 w-full md:w-auto justify-start md:justify-center rounded-[1000px]  hover:border hover:border-solid hover:border-[#efefef] hover:bg-white  "
               >
                 {label}
               </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0a192f] text-center py-6">
+        <div className="md:hidden bg-background text-center py-6">
           <ul className="space-y-6 text-light uppercase text-base">
             {navItems.map(({ id, label, to }) => (
               <li key={id}>

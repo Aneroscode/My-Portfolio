@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-6 sm:px-12 bg-[#0a192f] text-white"
+      className="min-h-screen flex items-center justify-center px-6 sm:px-12 bg-background text-primary"
     >
       <motion.div
         className="max-w-4xl mx-auto flex flex-col gap-6"
@@ -17,8 +17,8 @@ const About = () => {
           About Me
         </h2>
 
-        <p className="text-slate leading-relaxed">
-          Hello! I’m <span className="text-primary font-semibold">Miran</span>,
+        <p className="w-full font-medium text-lg leading-relaxed">
+          Hello! I’m <span className="text-primary font-semibold">Frank Abbey</span>,
           a passionate web developer who loves turning ideas into digital
           experiences. I specialize in building exceptional front-end products
           that are fast, responsive, and accessible.

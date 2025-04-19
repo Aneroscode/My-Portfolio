@@ -28,7 +28,7 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="min-h-screen px-6 sm:px-12 py-20 bg-[#0a192f] text-white"
+      className="min-h-screen px-6 sm:px-12 py-20 bg-background text-primary"
     >
       <div className="max-w-6xl mx-auto">
         <motion.h2
@@ -45,7 +45,7 @@ const Work = () => {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="bg-[#112240] rounded-xl overflow-hidden shadow-lg group"
+              className="bg-background/80 rounded-xl overflow-hidden shadow-lg group"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: index * 0.2 }}
@@ -64,7 +64,7 @@ const Work = () => {
                 <p className="text-slate text-sm">{project.description}</p>
                 <ul className="flex flex-wrap gap-2 text-xs text-primary mt-2">
                   {project.stack.map((tech, idx) => (
-                    <li key={idx} className="bg-[#233554] px-2 py-1 rounded">
+                    <li key={idx} className="bg-background/10 px-2 py-1 rounded">
                       {tech}
                     </li>
                   ))}
@@ -74,7 +74,7 @@ const Work = () => {
                     href={project.code}
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:underline text-light"
+                    className="hover:underline text-primary"
                   >
                     GitHub
                   </a>

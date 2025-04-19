@@ -5,26 +5,23 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen flex items-center justify-center px-6 sm:px-12 bg-[#0a192f] text-white"
+      className=" "
      >
-      <motion.div className="max-w-4xl mx-auto flex flex-col gap-6"
+      <motion.div className=" relative h-screen w-full mx-0 flex flex-col gap-6 md:px-1 py-6 self-stretch justify-center items-center"
 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
                 
       >
-        <p className="text-primary text-sm sm:text-base">Hi, my name is</p>
+        <p className="text-primary md:text-5xl sm:text-base font-bold">Welcome to my Portfolio</p>
 
-        <h1 className="text-4xl sm:text-5xl font-bold text-light">
-          Miran Ahmad<span className="text-primary">.</span>
-        </h1>
-
-        <h2 className="text-2xl sm:text-3xl text-slate">
+      
+        <h2 className="text-2xl sm:text-3xl text-black/80">
           I build things for the web.
         </h2>
 
-        <p className="text-slate max-w-md">
+        <p className=" realative self-stretch font-normal text-base mx-auto text-neutral-700 text-center max-w-[800px] md:text-lg text-black/70 ">
           I'm a web developer specializing in building (and occasionally
           designing) exceptional digital experiences. Currently, I’m focused on
           building accessible, human-centered products.
@@ -32,8 +29,8 @@ const Hero = () => {
 
         <div>
           <a
-            href="#contact"
-            className="inline-block bg-transparent border border-primary text-primary px-6 py-3 mt-4 rounded hover:bg-primary hover:text-[#0a192f] transition"
+            href="#footer"
+            className="inline-block bg-blue-700 border border-white/80 shadow-lg text-white px-6 py-3 mt-4 rounded  hover:scale-110 transition delay-150 ease-in"
           >
             Get in Touch
           </a>
@@ -41,11 +38,11 @@ const Hero = () => {
        </motion.div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-        <a href="#about" className="text-primary animate-bounce text-3xl">
+      {/* <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+        <a href="#about" className="text-blue-700 animate-bounce text-3xl">
           <FiChevronDown />
         </a>
-      </div>
+      </div> */}
     </section>
   );
 };
