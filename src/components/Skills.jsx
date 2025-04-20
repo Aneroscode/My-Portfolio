@@ -25,7 +25,7 @@ const Skills = () => {
     >
       <div className="max-w-4xl mx-auto">
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-primary mb-12 text-center"
+          className="text-3xl sm:text-4xl font-bold font-[berkshireswash] text-primary mb-12 text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -51,7 +51,7 @@ const Skills = () => {
               </div>
               <div className="w-full h-3 bg-slate-200 rounded">
                 <motion.div
-                  className="h-full bg-blue-500 rounded"
+                  className="h-full bg-[#7ee8fa] rounded"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
                   transition={{ duration: 1.2, ease: 'easeOut' }}

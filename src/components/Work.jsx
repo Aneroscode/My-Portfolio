@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 
+
 const projects = [
   {
     id: 1,
     title: 'Crypto-World',
-    image: '/images/crypto-dashboard.png', // Make sure to place images in public/images/
+    image: '/crypto.png', // Make sure to place images in public/images/
     description:
       'A sleek, responsive crypto dashboard displaying real-time data using CoinGecko API.',
     stack: ['React', 'Tailwind', 'Framer Motion'],
@@ -32,7 +33,7 @@ const Work = () => {
     >
       <div className="max-w-6xl mx-auto">
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-light mb-12 text-center"
+          className="text-3xl sm:text-4xl font-bold font-[berkshireswash] text-light mb-12 text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -41,7 +42,7 @@ const Work = () => {
           Some Things I’ve Built
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-10">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -57,8 +58,8 @@ const Work = () => {
                 className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"
               />
 
-              <div className="p-6 flex flex-col gap-3">
-                <h3 className="text-xl font-semibold text-primary">
+              <div className="p-6 flex flex-col gap-3 ">
+                <h3 className="text-xl font-bold font-[lobster two] text-primary">
                   {project.title}
                 </h3>
                 <p className="text-slate text-sm">{project.description}</p>
