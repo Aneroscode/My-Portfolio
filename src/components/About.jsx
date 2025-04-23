@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center px-6 sm:px-12 bg-background text-primary"
+      className="min-h-screen flex items-center justify-center px- sm:px-12 bg-background text-primary"
     >
       <motion.div
         className="max-w-4xl mx-auto flex flex-col gap-3"

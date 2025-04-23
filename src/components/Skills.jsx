@@ -13,7 +13,7 @@ const skills = [
   { label: 'Tailwind CSS', level: 90, icon: <SiTailwindcss className="text-cyan-400" />  },
   { label: 'JavaScript', level: 85, icon: <SiJavascript className="text-yellow-400" /> },
   { label: 'Framer Motion', level: 75, icon: <SiFramer className="text-pink-400" />  },
-  { label: 'Git / GitHub', level: 80, icon: <SiGithub className="text-black" /> },
+  { label: 'Git / GitHub', level: 80, icon: <SiGithub className="text-primary" /> },
   { label: 'Figma', level: 70, icon: <SiFigma className="text-pink-500" /> },
 ];
 
@@ -51,7 +51,7 @@ const Skills = () => {
               </div>
               <div className="w-full h-3 bg-slate-200 rounded">
                 <motion.div
-                  className="h-full bg-[#7ee8fa] rounded"
+                  className="h-full bg-gradient-to-r from-[#ffa585] to-[#ffeda0] rounded"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
                   transition={{ duration: 1.2, ease: 'easeOut' }}

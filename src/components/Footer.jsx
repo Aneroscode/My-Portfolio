@@ -20,8 +20,8 @@ const Footer = () => {
 
   return (
     
-    <footer id='footer' className="bg-[#f7f7f7]/80 rounded-2xl text-slate py-10 px-6 sm:px-12">
-      <div className="max-w-6xl mx-auto flex flex-col items-center gap-6">
+    <footer id='footer' className="   items-full py-2 center flex justify-center  text-slate ">
+      <div className=" mx-auto flex w-[600px] bg-[#fafafa] rounded-3xl p-24 shadow-xl sm:px-12 flex-col items-center justify-center  gap-6">
         {/* Social Icons */}
         <motion.div
           className="flex gap-6 text-xl"
@@ -59,7 +59,7 @@ const Footer = () => {
       className="text-primary hover:text-primary transition text-xl ml-3"
       title="Copy email"
     >
-      <MdContentCopy />
+      <MdContentCopy  className=' transition-all hover:scale-90'/>
     </button>
   </div>
         {copied === email && (
@@ -78,7 +78,7 @@ const Footer = () => {
             className="text-primary hover:text-primary transition text-xl ml-3"
             title="Copy phone"
             >
-            <MdContentCopy />
+            <MdContentCopy  className='transition-all hover:scale-90'/>
             </button>
         </div>
         {copied === phone && (

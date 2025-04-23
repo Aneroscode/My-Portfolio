@@ -8,9 +8,13 @@ export default {
     extend: {
       colors: {
         background: '#ffffff',
-        primary: '#000000',
-        secondary: '#8892b0',
-        accent: '#112240',
+        primary: '#1f2937',
+        secondary: '#2f27ce',
+        accent: '#443dff',
+        backgroundImage: {
+          'sunset-gradient': 'linear-gradient(90deg, #ffa585, #ffeda0)',
+        },
+        
       },
       fontFamily: {
         sans: ['Calibre', 'sans-serif'],

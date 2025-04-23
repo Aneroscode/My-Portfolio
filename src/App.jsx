@@ -20,7 +20,7 @@ function App() {
 
   return (
     
-  <div className=' flex flex-col items-center  gap-6 md:gap-12 max-w-[1440px] mx-auto md:px-12 md:py-12 relative  lg:px-[120px] xl:px-[300px] bg-background py-6 px-4'>
+  <div className='flex flex-col items-center gap-8 sm:gap-10 md:gap-14 px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 py-10 md:py-16 max-w-screen-xl mx-auto bg-background relative'>
     <Suspense fallback ={
       
       <AnimatePresence mode="wait">
@@ -29,7 +29,7 @@ function App() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.4 } }}
-        className="absolute inset-0 z-50 bg-[#0a192f]"
+        className="absolute inset-0 z-50 bg-[#dee5ee]"
       >
         <SkeletonLoader />
       </motion.div>
@@ -43,7 +43,7 @@ function App() {
        transition={{ duration: 0.6, delay: 0.2 }}
     >
       <Navbar/>
-      <main className=' '>
+      <main className='w-full '>
         <Hero/>
         <About/>
         <Work/>
