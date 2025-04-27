@@ -14,7 +14,7 @@ const Hero = () => {
             transition={{ duration: 1 }}
                 
       >
-        <p className="text-primary md:text-5xl font-[yellowtail]  sm:text-4xl font-bold">Welcome to my Portfolio</p>
+        <p className="text-primary md:text-5xl font-[yellowtail]  text-4xl font-bold">Welcome to my Portfolio</p>
 
       
         <h2 className="text-2xl md:text-3xl font-[lobster-two] text-black/80">
@@ -30,7 +30,7 @@ const Hero = () => {
         <div>
           <a
             href="#footer"
-            className="inline-block  bg-[#ff6903] border border-white/80 shadow-lg text-background px-6 py-3 mt-4 rounded-xl  hover:scale-110 transition delay-150 ease-in"
+            className="inline-block  bg-accent border border-white/80 shadow-lg text-background px-6 py-3 mt-4 rounded-xl  hover:scale-110 transition delay-150 ease-in"
           >
             Get in Touch
           </a>

@@ -2,6 +2,8 @@
 import { Suspense , lazy} from 'react'
 import { AnimatePresence, motion } from "framer-motion";
 import SkeletonLoader from './components/Skeleton'
+import Crypto from './components/Crypto';
+import { Route, Routes } from 'react-router-dom';
 
 const Navbar = lazy(() => import("./components/Navbar"));
 const Hero = lazy(() => import("./components/Hero"));
@@ -20,7 +22,7 @@ function App() {
 
   return (
     
-  <div className='flex flex-col items-center gap-8 sm:gap-10 md:gap-14 px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 py-10 md:py-16 max-w-screen-xl mx-auto bg-background relative'>
+  <div className='flex flex-col items-center gap-6  md:gap-12 px-6  md:px-12 lg:px-[120px] xl:px-[300px] py-6 md:py-12 max-w-[1440px] mx-auto relative overflow-x-hidden '>
     <Suspense fallback ={
       
       <AnimatePresence mode="wait">
@@ -43,13 +45,17 @@ function App() {
        transition={{ duration: 0.6, delay: 0.2 }}
     >
       <Navbar/>
-      <main className='w-full '>
+      <main className='overflow-hidden'>
         <Hero/>
         <About/>
         <Work/>
         <Skills/>
 
       </main>
+      <Routes>
+      <Route path="/crypto" element={<Crypto />} />
+    </Routes>
+
       <Footer/>
     </motion.div> 
     </Suspense>

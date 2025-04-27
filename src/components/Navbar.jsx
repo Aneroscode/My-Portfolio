@@ -11,18 +11,18 @@ const Navbar = () => {
   const navItems = [
     { id: 1, label: 'Home', to: 'hero' },
     { id: 2, label: 'About', to: 'about' },
-    { id: 3, label: 'Work', to: 'work' },
+    { id: 3, label: 'Projects', to: 'work' },
     { id: 4, label: 'Skills', to: 'skills' },
     { id: 5, label: 'Contact', to: 'footer' },
   ];
 
   return (
-    <header className="  sticky top-[20px] mt-[20px] z-50 bg-[#f7f7f7]/80 bg-opacity-70 font-[lobster two] backdrop-blur-sm rounded-[32px] overflow-hidden md:p- md:w-[calc(100%-35px)] border border-solid border-[#efefef] transition-all duration-300 hover:scale-[1.01] shadow-md max-w-full">
+    <header className="  sticky top-[20px] mt-[20px] z-50 mx-4 bg-[#f7f7f7]/80 bg-opacity-70 font-[lobster two] backdrop-blur-sm rounded-[32px] overflow-hidden md:p-2 md:w-[calc(100%-35px)] md:rounded-[1000px]  border border-solid border-[#efefef] transition-all duration-300 hover:scale-[1.01] shadow-md max-w-full">
       <nav className="  px-6  flex justify-between items-center relative w-full md:w-auto">
         {/* Logo */}
-        <div className=" font-bold flex justify-center py-3 gap-4 items-center flex-row text-primary">
+        <div className="  flex justify-center py-3 gap-4 items-center flex-row text-primary">
           {/* <img className='md:w-9 w-8 py-1 px-1 my-1   bg-gradient-to-r from-[#ffa585] to-[#ffeda0] rounded-full md:py-2 md:px-2' src={pic} alt="anero" /> */}
-          <h2>Aneroscode</h2>
+          <h2 className='font-[creepster] text-accent'>Aneroscode</h2>
         </div>
 
         {/* Desktop Nav */}

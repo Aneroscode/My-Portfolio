@@ -20,23 +20,23 @@ const Footer = () => {
 
   return (
     
-    <footer id='footer' className="   items-full py-2 center flex justify-center  text-slate ">
-      <div className=" mx-auto flex w-[600px] bg-[#fafafa] rounded-3xl p-24 shadow-xl sm:px-12 flex-col items-center justify-center  gap-6">
+    <footer id='footer' className="  items-center py-2  center flex justify-center  text-slate ">
+      <div className=" mx-auto flex  w-auto bg-[#fafafa] bg-vertical-wave rounded-3xl  shadow-xl p-12 md:p-24 flex-col items-center justify-center  gap-6">
         {/* Social Icons */}
         <motion.div
-          className="flex gap-6 text-xl"
+          className="flex gap-6 text-xl "
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className=" text-primary  transition-all hover:scale-150">
+          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className=" text-background  transition-all hover:scale-150">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="text-primary  transition-all hover:scale-150">
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="text-background  transition-all hover:scale-150">
             <FaLinkedin />
           </a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer" className="text-primary transition-all hover:scale-150">
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer" className="text-background transition-all hover:scale-150">
             <FaTwitter />
           </a>
         </motion.div>

@@ -21,7 +21,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen px-6 sm:px-12 py-20 bg-background/80 text-primary"
+      className="min-h-screen px-6 sm:px-12 py-20 bg-background/80 text-primary my-20"
     >
       <div className="max-w-4xl mx-auto">
         <motion.h2
@@ -46,12 +46,12 @@ const Skills = () => {
             >
               <div className="flex justify-between mb-1">
                 <span className="text-lg">{skill.icon}</span>
-                <span className="text-sm font-medium text-primary">{skill.label}</span>
+                <span className="text-sm md:text-lg font-medium text-primary">{skill.label}</span>
                 <span className="text-sm text-slate">{skill.level}%</span>
               </div>
-              <div className="w-full h-3 bg-slate-200 rounded">
+              <div className="w-full h-3 bg-slate-200 rounded-full overflow-hidden shadow-inner">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-[#ffa585] to-[#ffeda0] rounded"
+                  className="h-full bg-accent rounded"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
                   transition={{ duration: 1.2, ease: 'easeOut' }}
