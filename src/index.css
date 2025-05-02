@@ -8,14 +8,14 @@ body {
 
   /* Add this to your CSS file (e.g., globals.css if using Tailwind with Vite) */
 .bg-dot-pattern {
-  background-image: radial-gradient(#ff6903 1px, transparent 1px);
+  background-image: radial-gradient(#8B5CF6 1px, transparent 1px);
   background-size: 20px 20px;
   opacity: 0.1;
 }
 
 /* Add to your CSS */
 .bg-wave-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='100' height='40' viewBox='0 0 100 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q 25 0, 50 20 T 100 20 V40 H0 Z' fill='%238B5CF6' fill-opacity='0.3' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='40' viewBox='0 0 100 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q 25 0, 50 20 T 100 20 V40 H0 Z' fill='%23ffffff' fill-opacity='0.3' /%3E%3C/svg%3E");
   background-size: cover;
   background-repeat: repeat;
   background-position: center;

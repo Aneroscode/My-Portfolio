@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaTwitter } from 'react-icons/fa';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { MdContentCopy } from "react-icons/md";
 
@@ -20,87 +20,136 @@ const Footer = () => {
 
   return (
     
-    <footer id='footer' className="  items-center py-2  center flex justify-center  text-slate ">
-      <div className=" mx-auto flex  w-auto bg-[#fafafa] bg-vertical-wave rounded-3xl  shadow-xl p-12 md:p-24 flex-col items-center justify-center  gap-6">
-        {/* Social Icons */}
-        <motion.div
-          className="flex gap-6 text-xl "
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-        >
-          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className=" text-background  transition-all hover:scale-150">
-            <FaGithub />
-          </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="text-background  transition-all hover:scale-150">
-            <FaLinkedin />
-          </a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer" className="text-background transition-all hover:scale-150">
-            <FaTwitter />
-          </a>
-        </motion.div>
+    <footer id='footer' className="bg-navy text-white  items-center py-12   flex justify-center mt-20  text-slate ">
+      <div className=" mx-auto flex  md:w-[800px] bg-white text-primary2  rounded-3xl w-full max-w-3xl  shadow-xl p-10 flex-col items-center   gap-6">
+
+      <p className='text-primary text-lg'>~Let's build something amazing together~</p>
 
         {/* Contact Info */}
         <motion.div
-          className="flex flex-col items-center gap-4 w-full  max-w-md text-sm"
+          className="flex flex-col md:flex-row items-center justify-start gap-4 w-full   text-xs"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
         >
          {/* Email */}
-  <div className="flex items-center justify-between bg-[#f7f7f7]/60 bg-opacity/70 border border-solid border-[#efefef] w-full px-4 py-3 rounded-md">
-    <p className="text-primary text-lg font-semi-bold truncate">
-      📧 {email}
+      <div className="flex flex-row rounded-xl items-center justify-between bg-gray-100 border  border-gray-200 w-full px-4 py-3 ">
+
+      <FaEnvelope
+      className='text-accent2  text-lg  '
+      
+      />
+   
+    <div className='text-primary2 flex-1 text-xs ml-4'>
+    <p>Email</p>
+    <p className=" text-xs  truncate">
+      {email}
     </p>
+    </div>
+    
     <button
       onClick={() => handleCopy(email)}
-      className="text-primary hover:text-primary transition text-xl ml-3"
+      className=" hover:text-accent2 transition  text-xl "
       title="Copy email"
     >
       <MdContentCopy  className=' transition-all hover:scale-90'/>
     </button>
   </div>
-        {copied === email && (
-            <span className="text-primary text-xs -mt-3 mb-1 text-center">
-            Email copied to clipboard!
-            </span>
-        )}
+        <AnimatePresence>
+          {copied === email && (
+            <motion.span
+              key="email-copied"
+              className="text-accent2 text-xs "
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+            >
+              Email copied to clipboard!
+            </motion.span>
+          )}
+        </AnimatePresence>
 
         {/* Phone */}
-        <div className="flex items-center justify-between bg-[#f7f7f7]/60 bg-opacity-70 border border-solid border-[#efefef]  w-full px-4 py-3 rounded-md">
-            <p className="text-primary text-lg  font-semi-bold truncate">
-            📱 {phone}
+        <div className="flex flex-row rounded-xl items-center justify-between  bg-gray-100 border  border-gray-200 w-full px-4 py-3 ">
+
+          <FaPhone
+          className='text-[#000298]  text-lg  '
+          
+          />
+          
+            <div className='text-primary2 flex-1 ml-4'>
+            <p className=''>Phone</p>
+            <p className="text-xs text-accent2 truncate">
+              {phone}
             </p>
+            </div>
+            
             <button
-            onClick={() => handleCopy(phone)}
-            className="text-primary hover:text-primary transition text-xl ml-3"
-            title="Copy phone"
+              onClick={() => handleCopy(phone)}
+              className="hover:text-accent2 transition  text-xl "
+              title="Copy email"
             >
-            <MdContentCopy  className='transition-all hover:scale-90'/>
+              <MdContentCopy  className=' transition-all hover:scale-90'/>
             </button>
-        </div>
-        {copied === phone && (
-            <span className="text-primary text-xs -mt-3 mb-1 text-center">
-            Phone number copied!
-            </span>
-        )}
+          </div>
+        <AnimatePresence>
+          {copied === phone && (
+            <motion.span
+              key="phone-copied"
+              className="text-accent2 text-xs mt-2 "
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+            >
+              Phone number copied!
+            </motion.span>
+          )}
+        </AnimatePresence>
+
         </motion.div>
 
         {/* Copyright */}
+        <div className='flex flex-col md:flex  md:flex-row-reverse  w-full justify-between  '>
+          
+
         <motion.p
-          className="text-sm text-black/70"
+          className="text-sm text-gray-600 mt-4 "
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          © {new Date().getFullYear()} aneroscode. Built with React & Tailwind CSS.
+          © {new Date().getFullYear()} aneroscode. 
         </motion.p>
 
-        {/* Back to Top */}
-        <motion.button
+            {/* Social Icons */}
+        <motion.div
+          className="flex items-center justify-center text-primary2 gap-6 text-xl "
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className=" hover:text-accent2  transition-all ">
+            <FaGithub />
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="hover:text-accent2  transition-all ">
+            <FaLinkedin />  
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer" className="hover:text-accent2 transition-all ">
+            <FaTwitter />
+          </a>
+        </motion.div>
+
+
+        </div>
+       
+
+        
+        {/* <motion.button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="mt-4 text-sm text-primary hover:underline"
           initial={{ opacity: 0 }}
@@ -109,7 +158,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           ↑ Back to top
-        </motion.button>
+        </motion.button> */}
       </div>
     </footer>
   );

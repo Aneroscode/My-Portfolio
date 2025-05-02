@@ -10,7 +10,10 @@ export default {
         background: '#ffffff',
         primary: '#1f2937',
         secondary: '#2f27ce',
-        accent: '#443dff',
+        accent: '#8B5CF6',
+        navy: '#0E0F52',
+        accent2:'#1A2BC3',
+        primary2:'#000298',
         backgroundImage: {
           'sunset-gradient': 'linear-gradient(90deg, #ffa585, #ffeda0)',
         },

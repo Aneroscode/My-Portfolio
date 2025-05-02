@@ -11,13 +11,14 @@ const Navbar = () => {
   const navItems = [
     { id: 1, label: 'Home', to: 'hero' },
     { id: 2, label: 'About', to: 'about' },
-    { id: 3, label: 'Projects', to: 'work' },
     { id: 4, label: 'Skills', to: 'skills' },
+    { id: 3, label: 'Projects', to: 'work' },
     { id: 5, label: 'Contact', to: 'footer' },
   ];
 
   return (
-    <header className="  sticky top-[20px] mt-[20px] z-50 mx-4 bg-[#f7f7f7]/80 bg-opacity-70 font-[lobster two] backdrop-blur-sm rounded-[32px] overflow-hidden md:p-2 md:w-[calc(100%-35px)] md:rounded-[1000px]  border border-solid border-[#efefef] transition-all duration-300 hover:scale-[1.01] shadow-md max-w-full">
+    <header className="  sticky top-[20px]  mt-5 mb-10 z-50 mx-auto bg-[#f7f7f7]/90  font-[lobster two] backdrop-blur-sm rounded-[32px] overflow-hidden p-3 md:p-2 md:max-w-3xl md:rounded-[1000px] w-[calc(100%-32px)]  border border-solid border-[#efefef] transition-all duration-300 hover:scale-[1.01] shadow-md gap-4 md:gap-20 max-w-full">
+
       <nav className="  px-6  flex justify-between items-center relative w-full md:w-auto">
         {/* Logo */}
         <div className="  flex justify-center py-3 gap-4 items-center flex-row text-primary">
@@ -32,6 +33,8 @@ const Navbar = () => {
               <Link
                 to={to}
                 smooth={true}
+                activeClass=" underline font-bold"
+                spy={true}
                 duration={500}
                 className="cursor-pointer whitespace-nowrap active:underline text-sm font-semibold justify-center text-primary  hover:underline  "
               >
@@ -49,7 +52,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden  bg-transparent bg-opacity-70 font-[lobster two] backdrop-blur-xl text-center py-6">
+        <div className="md:hidden  bg-white bg-opacity-90 font-[lobster two] backdrop-blur-md shadow-lg rounded-b-3xl text-center py-6">
           <ul className="space-y-6 text-primary uppercase text-base">
             {navItems.map(({ id, label, to }) => (
               <li key={id}>
